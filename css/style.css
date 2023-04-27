@@ -1,6 +1,6 @@
 .centralizer {
   margin: 0 auto;
-  font-family: "Trebuchet MS", "Helvetica", sans-serif
+  font-family: "Trebuchet MS", "Helvetica", sans-serif;
 }
 
 .textarea {
@@ -10,7 +10,7 @@
   margin: 10px auto 10px;
   padding: 10px;
   font-size: 18px;
-  color: #444444
+  color: #444444;
 }
 
 .caseDown,
@@ -19,43 +19,46 @@
 .caps {
   display: block;
   width: 100;
-  min-height: 40px
+  min-height: 40px;
 }
 
 .hidden {
-  display: none
+  display: none;
 }
 
 .description,
 .language,
 .title {
   margin: 10px auto;
-  text-align: center
+  text-align: center;
 }
 
 .title {
   font-size: 30px;
   color: rgba(101,134,177,0.8);
   -webkit-text-stroke: 1px rgba(114,177,101,0.8);
-  -webkit-text-fill-color: rgba(101,134,177,0.8)
+  -webkit-text-fill-color: rgba(101,134,177,0.8);
 }
 
 .keyboard {
+  display: flex;
+  flex-wrap: wrap;
   width: 704px;
+  height: 240px;
   margin: 0 auto;
   padding: 5px;
   padding-left: 0;
   padding-bottom: 0;
   background: #888888;
   border: 3px solid #222222;
-  border-radius: 5px
+  border-radius: 5px;
 }
 
 .keyboard .row {
   clear: both;
   width: 100%;
   height: 40px;
-  margin-bottom: 8px
+  margin-bottom: 8px;
 }
 
 .keyboard .key {
@@ -63,6 +66,7 @@
   width: 40px;
   height: 40px;
   margin-left: 6px;
+  margin-bottom: 6px;
   font-weight: 500;
   line-height: 40px;
   text-align: center;
@@ -71,16 +75,16 @@
   border-radius: 3px;
   cursor: pointer;
   user-select: none;
-  transition: border-radius 0.3s, background-color 0.3s
+  transition: border-radius 0.3s, background-color 0.3s;
 }
 
 .keyboard .key:hover {
-  background: #79aa89
+  background: #e8e689;
 }
 
 .keyboard .key.active {
-  background-color: #2cfd72;
-  border-radius: 50px
+  background-color: #fdfd2c;
+  border-radius: 50px;
 }
 
 .keyboard .AltLeft,
@@ -100,28 +104,32 @@
 .keyboard .Tab,
 .keyboard .MetaLeft {
   font-weight: 600;
-  background-color: #222222
+  background-color: #222222;
 }
 
 .keyboard .Tab {
-  width: 50px
+  width: 50px;
 }
 
 .keyboard .Backspace,
 .keyboard .CapsLock,
 .keyboard .ShiftLeft {
-  width: 100px
+  width: 100px;
 }
 
 .keyboard .Delete {
-  width: 44px
+  width: 44px;
 }
 
 .keyboard .Enter,
 .keyboard .ShiftRight {
-  width: 86px
+  width: 86px;
 }
 
 .keyboard .Space {
-  width: 330px
+  width: 280px;
+}
+
+.keyboard .Slash {
+  width: 90px;
 }
