@@ -1,8 +1,4 @@
-
-
-
-
-function init() {
+function initKeyboard() {
   let systemOfUser;
 
   if (navigator.appVersion.indexOf('Windows')>=0) {
@@ -33,8 +29,6 @@ function init() {
 
   document.querySelector("body").innerHTML = centralizer;
   document.querySelector(".centralizer").innerHTML = title + textarea + keyboardAll + description + language;
-
-
 }
 
-init();
+export { initKeyboard }
