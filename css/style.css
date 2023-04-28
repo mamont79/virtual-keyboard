@@ -75,16 +75,22 @@
   border-radius: 3px;
   cursor: pointer;
   user-select: none;
-  transition: border-radius 0.3s, background-color 0.3s;
+  transition: all 0.3s;
 }
 
 .keyboard .key:hover {
-  background: #e8e689;
+  background: #2a3056;
+  transform: scale(0.98);
 }
 
 .keyboard .key.active {
-  background-color: #fdfd2c;
-  border-radius: 50px;
+  background-color: #685001;
+  border-radius: 10px;
+  transform: scale(0.94);
+}
+
+.keyboard .key.upper {
+  text-transform: uppercase;
 }
 
 .keyboard .AltLeft,

@@ -1,5 +1,4 @@
-function initKeyboard() {
-  let systemOfUser;
+let systemOfUser;
 
   if (navigator.appVersion.indexOf('Windows')>=0) {
     systemOfUser = 'Windows';
@@ -8,6 +7,8 @@ function initKeyboard() {
     systemOfUser = 'Linux';
   } 
 
+function initKeyboard() {
+  
   let centralizer = '';
   centralizer = '<div class="centralizer"></div>';
 
@@ -24,11 +25,11 @@ function initKeyboard() {
   description = `<p class="description">Клавиатура создана в операционной системе ${systemOfUser} </p>`;
 
   let language = '';
-  language = '<p class="language">Для переключения языка комбинация: левыe ctrl + alt</p>';
+  language = '<p class="language">Для переключения языка комбинация: левыe ctrl + shift</p>';
 
 
   document.querySelector("body").innerHTML = centralizer;
   document.querySelector(".centralizer").innerHTML = title + textarea + keyboardAll + description + language;
 }
 
-export { initKeyboard }
+export { initKeyboard, systemOfUser }
