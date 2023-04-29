@@ -1,78 +1,91 @@
 const winKeys = [
   {
     "key": "`",
+    "key2": "~",
     "keyCode": 192,
     "code": "Backquote",
     "class": "key",
   },
   {
     "key": "1",
+    "key2": "!",
     "keyCode": 49,
     "code": "Digit1",
     "class": "key",
   },
   {
     "key": "2",
+    "key2": "@",
     "keyCode": 50,
     "code": "Digit2",
     "class": "key",
   },
   {
     "key": "3",
+    "key2": "#",
     "keyCode": 51,
     "code": "Digit3",
     "class": "key",
   },
   {
     "key": "4",
+    "key2": "$",
     "keyCode": 52,
     "code": "Digit4",
     "class": "key",
   },
   {
     "key": "5",
+    "key2": "%",
     "keyCode": 53,
     "code": "Digit5",
     "class": "key",
   },
   {
     "key": "6",
+    "key2": "^",
     "keyCode": 54,
     "code": "Digit6",
     "class": "key",
   },
   {
     "key": "7",
+    "key2": "&",
     "keyCode": 55,
     "code": "Digit7",
     "class": "key",
   },
   {
     "key": "8",
+    "key2": "*",
     "keyCode": 56,
     "code": "Digit8",
     "class": "key",
   },
   {
     "key": "9",
+    "key2": "(",
     "keyCode": 57,
     "code": "Digit9",
     "class": "key",
   },
   {
     "key": "0",
+    "key2": ")",
     "keyCode": 48,
     "code": "Digit0",
     "class": "key",
   },
   {
     "key": "-",
+    "key2": "_",
     "keyCode": 189,
     "code": "Minus",
     "class": "key",
   },
   {
     "key": "=",
+    "key2": "+",
     "keyCode": 187,
     "code": "Equal",
     "class": "key",
@@ -128,6 +141,7 @@ const winKeys = [
   {
     "key": "u",
     "keyCode": 85,
+    "code": "KeyU",
     "class": "key",
   },
   {
@@ -150,18 +164,21 @@ const winKeys = [
   },
   {
     "key": "[",
+    "key2": "{",
     "keyCode": 219,
     "code": "BracketLeft",
     "class": "key",
   },
   {
     "key": "]",
+    "key2": "}",
     "keyCode": 221,
     "code": "BracketRight",
     "class": "key",
   },
   {
     "key": "\\",
+    "key2": "|",
     "keyCode": 220,
     "code": "Backslash",
     "class": "key Slash",
@@ -228,12 +245,14 @@ const winKeys = [
   },
   {
     "key": ";",
+    "key2": ":",
     "keyCode": 186,
     "code": "Semicolon",
     "class": "key",
   },
   {
     "key": "'",
+    "key2": '"',
     "keyCode": 222,
     "code": "Quote",
     "class": "key",
@@ -294,18 +313,21 @@ const winKeys = [
   },
   {
     "key": ",",
+    "key2": "<",
     "keyCode": 188,
     "code": "Comma",
     "class": "key",
   },
   {
     "key": ".",
+    "key2": ">",
     "keyCode": 190,
     "code": "Period",
     "class": "key",
   },
   {
     "key": "/",
+    "key2": "?",
     "keyCode": 191,
     "code": "Slash",
     "class": "key",
@@ -319,13 +341,13 @@ const winKeys = [
   {
     "key": "Shift",
     "keyCode": 16,
-    code: "ShiftRight",
+    "code": "ShiftRight",
     "class": "key ShiftRight",
   },
   {
     "key": "Ctrl",
     "keyCode": 17,
-    code: "ControlLeft",
+    "code": "ControlLeft",
     "class": "key ControlLeft",
   },
   {
@@ -343,7 +365,7 @@ const winKeys = [
   {
     "key": "Alt",
     "keyCode": 18,
-    code: "AltLeft",
+    "code": "AltLeft",
     "class": "key AltLeft",
   },
   {
@@ -355,10 +377,9 @@ const winKeys = [
   {
     "key": "Alt",
     "keyCode": 18,
-    code: "AltRight",
+    "code": "AltRight",
     "class": "key AltRight",
   },
-  
   {
     "key": "&larr;",
     "keyCode": 37,
@@ -380,7 +401,7 @@ const winKeys = [
   {
     "key": "Ctrl",
     "keyCode": 17,
-    code: "ControlRight",
+    "code": "ControlRight",
     "class": "key ControlRight",
   },
 ];
