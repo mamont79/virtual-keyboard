@@ -90,7 +90,10 @@
 }
 
 .keyboard .key.upper {
-  text-transform: uppercase;
+  text-transform: capitalize;
+}
+.keyboard .key.caps {
+  text-transform: capitalize;
 }
 
 .keyboard .AltLeft,
