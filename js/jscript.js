@@ -1,11 +1,9 @@
 import { initKeyboard, systemOfUser } from "/js/init.js";
 import { winKeys } from "/js/winKeyboard.js";
 import { rusKeys } from "/js/rusKeyboard.js";
-import {
-  capsKeyboard,
-  shiftKeyboard,
-  noShiftKeyboard,
-} from "/js/caps-shift.js";
+import { backspaceText, removeCursor, addCursor } from "/js/text-input.js";
+import { capsKeyboard, shiftKeyboard, noShiftKeyboard } from "/js/caps-shift.js";
+
 
 let langKeyboard = winKeys;
 
@@ -21,9 +19,14 @@ function buildKeyboard() {
 initKeyboard();
 buildKeyboard();
 
+
+
+
+
+
 // on press functionality
 
-const capsButton = document.querySelector(".CapsLock");
+
 
 window.onkeypress = function (event) {
   if (event.code == "ShiftRight" || event.code == "ShiftLeft") {
@@ -32,6 +35,7 @@ window.onkeypress = function (event) {
 };
 
 window.onkeydown = function (event) {
+  removeCursor();
   if (event.code == "CapsLock") {
     document.querySelector(".CapsLock").classList.toggle("active");
     capsKeyboard();
@@ -39,11 +43,26 @@ window.onkeydown = function (event) {
     document
       .querySelector('.keyboard .key[data="' + event.code + '"]')
       .classList.add("active");
+    
   }
   if (event.code == "ShiftRight" || event.code == "ShiftLeft") {
     shiftKeyboard();
   }
-  console.log(event.code);
+  if (event.key.length == 1) {
+    if (checkCaps.classList.contains("caps") || checkShiftL.classList.contains("upper") || checkShiftR.classList.contains("upper")) {
+      textField.textContent += event.key.toUpperCase();
+    } else {
+      textField.textContent += event.key;
+    }
+  }
+  if (event.code == "Enter") {
+    textField.textContent += '\n';
+  }
+  if (event.code ==  "Backspace") {
+    backspaceText();
+  }
+  addCursor();
+  //console.log(event.code);
 };
 
 window.onkeyup = function (event) {
@@ -71,7 +90,7 @@ document.querySelectorAll(".keyboard .key").forEach(function (element) {
     if (codeButton == "ShiftRight" || codeButton == "ShiftLeft") {
       shiftKeyboard();
     }
-    console.log(codeButton);
+    //console.log(codeButton);
   };
 });
 
@@ -86,3 +105,34 @@ document.querySelectorAll(".keyboard .key").forEach(function (element) {
     }
   };
 });
+
+
+// text input
+const textField = document.querySelector(".textarea");
+const checkCaps = document.querySelector(".CapsLock");
+const checkShiftL = document.querySelector(".ShiftLeft");
+const checkShiftR = document.querySelector(".ShiftRight");
+
+
+document.querySelectorAll(".keyboard .key").forEach(function (element) {
+  element.onclick = function (event) {
+    removeCursor();
+    let buttonContent = this.textContent;
+    if (buttonContent.length == 1) {
+      if (checkCaps.classList.contains("caps") || checkShiftL.classList.contains("upper") || checkShiftR.classList.contains("upper")) {
+        textField.textContent += buttonContent.toUpperCase();
+      } else {
+        textField.textContent += buttonContent;
+      }
+    } 
+    if (buttonContent == "Enter") {
+      textField.textContent += '\n';
+    }
+    if (buttonContent == "Backspace") {
+      backspaceText();
+    }
+    addCursor();
+    
+  };
+});
+

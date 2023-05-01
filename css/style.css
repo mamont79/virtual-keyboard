@@ -49,7 +49,7 @@
   padding: 5px;
   padding-left: 0;
   padding-bottom: 0;
-  background: #888888;
+  background: #21b1ea;
   border: 3px solid #222222;
   border-radius: 5px;
 }
@@ -76,7 +76,9 @@
   cursor: pointer;
   user-select: none;
   transition: all 0.3s;
+  box-shadow: 2px 2px  #fcf22e;
 }
+
 
 .keyboard .key:hover {
   background: #2a3056;
@@ -85,8 +87,9 @@
 
 .keyboard .key.active {
   background-color: #685001;
-  border-radius: 10px;
+  border-radius: 5px;
   transform: scale(0.94);
+  box-shadow: none;
 }
 
 .keyboard .key.upper {

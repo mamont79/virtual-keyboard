@@ -16,7 +16,8 @@ function initKeyboard() {
   title = '<p class="title">Virtual keyboard</p>'
 
   let textarea = '';
-  textarea = '<textarea class="body--textarea textarea" id="textarea" rows="5" cols="50"></textarea>';
+  textarea = '<textarea class="body--textarea textarea" id="textarea" rows="5" cols="50">|</textarea>';
+  
 
   let keyboardAll = '';
   keyboardAll = '<div class="body--keyboard keyboard" id="keyboard"></div>';
