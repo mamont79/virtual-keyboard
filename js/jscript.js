@@ -1,8 +1,8 @@
-import { initKeyboard, systemOfUser } from "../js/init";
-import { winKeys } from "../js/winKeyboard";
-import { rusKeys } from "../js/rusKeyboard";
-import { backspaceText, removeCursor, addCursor } from "../js/text-input";
-import { capsKeyboard, shiftKeyboard, noShiftKeyboard } from "../js/caps-shift";
+import { initKeyboard, systemOfUser } from "../js/init.js";
+import { winKeys } from "../js/winKeyboard.js";
+import { rusKeys } from "../js/rusKeyboard.js";
+import { backspaceText, removeCursor, addCursor } from "../js/text-input.js";
+import { capsKeyboard, shiftKeyboard, noShiftKeyboard } from "../js/caps-shift.js";
 
 
 let langKeyboard = winKeys;
