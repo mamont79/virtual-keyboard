@@ -1,8 +1,8 @@
-import { initKeyboard, systemOfUser } from "./virtual-keyboard/js/init.js";
-import { winKeys } from "./virtual-keyboard/js/winKeyboard.js";
-import { rusKeys } from "./virtual-keyboard/js/rusKeyboard.js";
-import { backspaceText, removeCursor, addCursor } from "./virtual-keyboard/js/text-input.js";
-import { capsKeyboard, shiftKeyboard, noShiftKeyboard } from "./virtual-keyboard/js/caps-shift.js";
+import { initKeyboard, systemOfUser } from "../js/init";
+import { winKeys } from "../js/winKeyboard";
+import { rusKeys } from "../js/rusKeyboard";
+import { backspaceText, removeCursor, addCursor } from "../js/text-input";
+import { capsKeyboard, shiftKeyboard, noShiftKeyboard } from "../js/caps-shift";
 
 
 let langKeyboard = winKeys;
