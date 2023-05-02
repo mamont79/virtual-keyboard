@@ -1,11 +1,11 @@
-let systemOfUser;
+// let systemOfUser;
 
-  if (navigator.appVersion.indexOf('Windows')>=0) {
-    systemOfUser = 'Windows';
-  } 
-  if (navigator.appVersion.indexOf('Linux')>=0) {
-    systemOfUser = 'Linux';
-  } 
+  // if (navigator.appVersion.indexOf('Windows')>=0) {
+  //   systemOfUser = 'Windows';
+  // } 
+  // if (navigator.appVersion.indexOf('Linux')>=0) {
+  //   systemOfUser = 'Linux';
+  // } 
 
 function initKeyboard() {
   
@@ -22,15 +22,15 @@ function initKeyboard() {
   let keyboardAll = '';
   keyboardAll = '<div class="body--keyboard keyboard" id="keyboard"></div>';
 
-  let description = '';
-  description = `<p class="description">Клавиатура создана в операционной системе ${systemOfUser} </p>`;
+  // let description = '';
+  // description = `<p class="description">Клавиатура создана в операционной системе ${systemOfUser} </p>`;
 
   let language = '';
   language = '<p class="language">Для переключения языка комбинация: левыe ctrl + shift</p>';
 
-
   document.querySelector("body").innerHTML = centralizer;
-  document.querySelector(".centralizer").innerHTML = title + textarea + keyboardAll + description + language;
+  document.querySelector(".centralizer").innerHTML = title + textarea + keyboardAll + language;
+  
 }
 
-export { initKeyboard, systemOfUser }
+export { initKeyboard }

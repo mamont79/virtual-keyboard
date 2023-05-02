@@ -4,8 +4,10 @@ import { rusKeys } from "../js/rusKeyboard.js";
 import { backspaceText, removeCursor, addCursor } from "../js/text-input.js";
 import { capsKeyboard, shiftKeyboard, noShiftKeyboard } from "../js/caps-shift.js";
 
+alert("пожалуйста, дайте ещё день доделать смену языка при нажатии клавиш")
 
 let langKeyboard = winKeys;
+
 
 function buildKeyboard() {
   let out = "";
@@ -16,17 +18,26 @@ function buildKeyboard() {
   document.querySelector(".keyboard").innerHTML = out;
 }
 
+
 initKeyboard();
 buildKeyboard();
 
+// change language
 
-
-
-
+function changeLanguage() {
+  let checkLang = document.querySelector('.keyboard .key[data="KeyQ"]').textContent;
+  if(checkLang == "q" || checkLang == "Q") {
+    langKeyboard = rusKeys;    
+  } else {
+    langKeyboard = winKeys;
+    
+  }
+  buildKeyboard();
+}
 
 // on press functionality
-
-
+const ctrlButtonR = document.querySelector(".ControlRight");
+const ctrlButtonL = document.querySelector(".ControlLeft");
 
 window.onkeypress = function (event) {
   if (event.code == "ShiftRight" || event.code == "ShiftLeft") {
@@ -46,7 +57,11 @@ window.onkeydown = function (event) {
     
   }
   if (event.code == "ShiftRight" || event.code == "ShiftLeft") {
-    shiftKeyboard();
+    if (ctrlButtonL.classList.contains("active") || ctrlButtonR.classList.contains("active")){
+      changeLanguage();
+    } else {
+      shiftKeyboard();
+    }
   }
   if (event.key.length == 1) {
     if (checkCaps.classList.contains("caps") || checkShiftL.classList.contains("upper") || checkShiftR.classList.contains("upper")) {
@@ -135,4 +150,6 @@ document.querySelectorAll(".keyboard .key").forEach(function (element) {
     
   };
 });
+
+
 

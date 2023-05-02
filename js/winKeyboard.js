@@ -266,7 +266,7 @@ const winKeys = [
   {
     "key": "Shift",
     "keyCode": 16,
-    code: "ShiftLeft",
+    "code": "ShiftLeft",
     "class": "key ShiftLeft",
   },
   {
