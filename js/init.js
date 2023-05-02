@@ -26,7 +26,7 @@ function initKeyboard() {
   // description = `<p class="description">Клавиатура создана в операционной системе ${systemOfUser} </p>`;
 
   let language = '';
-  language = '<p class="language">Для переключения языка комбинация: левыe ctrl + shift</p>';
+  language = '<p class="language">Для переключения языка комбинация: левыe ctrl + alt</p>';
 
   document.querySelector("body").innerHTML = centralizer;
   document.querySelector(".centralizer").innerHTML = title + textarea + keyboardAll + language;
